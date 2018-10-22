@@ -55,6 +55,7 @@
     <Compile Include="BLL\IRpository.cs" />
     <Compile Include="BLL\RepositoryBase.cs" />
     <Compile Include="DAL\Contexto.cs" />
+    <Compile Include="Entidades\Meta.cs" />
     <Compile Include="Entidades\Vendedor.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -69,6 +70,12 @@
     </Compile>
     <Compile Include="UI\Consulta\CVendedor.Designer.cs">
       <DependentUpon>CVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registro\RMeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registro\RMeta.Designer.cs">
+      <DependentUpon>RMeta.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registro\RVendedor.cs">
       <SubType>Form</SubType>
@@ -91,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Consulta\CVendedor.resx">
       <DependentUpon>CVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registro\RMeta.resx">
+      <DependentUpon>RMeta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registro\RVendedor.resx">
       <DependentUpon>RVendedor.cs</DependentUpon>

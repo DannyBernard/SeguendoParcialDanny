@@ -83,6 +83,14 @@ namespace SegundoParcialDanny.UI.Registro
             return (vendedores != null);
         }
 
+        public void LlenarComboBox()
+        {
+            RepositoryBase<Meta> repositrio = new RepositoryBase<Meta>();
+            MetacomboBox.DataSource = repositorio.GetList(x => true);
+           MetacomboBox.ValueMember = "Descripcion";
+        }
+
+
         private void NuevoButton_Click(object sender, EventArgs e)
         {
             Limpiar();
@@ -188,6 +196,12 @@ namespace SegundoParcialDanny.UI.Registro
 
             TotaltextBox.Text = Convert.ToString(retencion);
 
+        }
+
+        private void Addbutton_Click(object sender, EventArgs e)
+        {
+            RMeta rMeta = new RMeta();
+            rMeta.Show();
         }
     }
 

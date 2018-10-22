@@ -41,15 +41,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Addbutton = new System.Windows.Forms.Button();
+            this.MetacomboBox = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.RetencionnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SueldonumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -181,6 +187,10 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "ID";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::SegundoParcialDanny.Properties.Resources.search;
@@ -197,7 +207,7 @@
             // EliminarButton
             // 
             this.EliminarButton.Image = global::SegundoParcialDanny.Properties.Resources.delete;
-            this.EliminarButton.Location = new System.Drawing.Point(374, 389);
+            this.EliminarButton.Location = new System.Drawing.Point(379, 527);
             this.EliminarButton.Margin = new System.Windows.Forms.Padding(4);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(100, 85);
@@ -210,7 +220,7 @@
             // GuardarButton
             // 
             this.GuardarButton.Image = global::SegundoParcialDanny.Properties.Resources.save;
-            this.GuardarButton.Location = new System.Drawing.Point(204, 389);
+            this.GuardarButton.Location = new System.Drawing.Point(209, 527);
             this.GuardarButton.Margin = new System.Windows.Forms.Padding(4);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(100, 85);
@@ -223,7 +233,7 @@
             // NuevoButton
             // 
             this.NuevoButton.Image = global::SegundoParcialDanny.Properties.Resources.document_new;
-            this.NuevoButton.Location = new System.Drawing.Point(35, 389);
+            this.NuevoButton.Location = new System.Drawing.Point(40, 527);
             this.NuevoButton.Margin = new System.Windows.Forms.Padding(4);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(100, 85);
@@ -233,15 +243,51 @@
             this.NuevoButton.UseVisualStyleBackColor = true;
             this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
-            // errorProvider1
+            // groupBox1
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.groupBox1.Controls.Add(this.Addbutton);
+            this.groupBox1.Controls.Add(this.MetacomboBox);
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Location = new System.Drawing.Point(11, 331);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(476, 189);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Metas";
+            // 
+            // Addbutton
+            // 
+            this.Addbutton.Location = new System.Drawing.Point(183, 15);
+            this.Addbutton.Name = "Addbutton";
+            this.Addbutton.Size = new System.Drawing.Size(75, 35);
+            this.Addbutton.TabIndex = 2;
+            this.Addbutton.Text = "ADD";
+            this.Addbutton.UseVisualStyleBackColor = true;
+            this.Addbutton.Click += new System.EventHandler(this.Addbutton_Click);
+            // 
+            // MetacomboBox
+            // 
+            this.MetacomboBox.FormattingEnabled = true;
+            this.MetacomboBox.Location = new System.Drawing.Point(46, 20);
+            this.MetacomboBox.Name = "MetacomboBox";
+            this.MetacomboBox.Size = new System.Drawing.Size(121, 24);
+            this.MetacomboBox.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 56);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(464, 115);
+            this.dataGridView1.TabIndex = 0;
             // 
             // RVendedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 493);
+            this.ClientSize = new System.Drawing.Size(499, 625);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.TotaltextBox);
@@ -264,6 +310,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.SueldonumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,5 +336,9 @@
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button Addbutton;
+        private System.Windows.Forms.ComboBox MetacomboBox;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
