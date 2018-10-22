@@ -42,14 +42,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.MetacomboBox = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Addbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Addbutton = new System.Windows.Forms.Button();
-            this.MetacomboBox = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.RetencionnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SueldonumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
@@ -191,6 +192,47 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Addbutton);
+            this.groupBox1.Controls.Add(this.MetacomboBox);
+            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Location = new System.Drawing.Point(11, 331);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(476, 189);
+            this.groupBox1.TabIndex = 32;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Metas";
+            // 
+            // MetacomboBox
+            // 
+            this.MetacomboBox.FormattingEnabled = true;
+            this.MetacomboBox.Location = new System.Drawing.Point(46, 20);
+            this.MetacomboBox.Name = "MetacomboBox";
+            this.MetacomboBox.Size = new System.Drawing.Size(121, 24);
+            this.MetacomboBox.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 56);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(464, 115);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Addbutton
+            // 
+            this.Addbutton.Image = global::SegundoParcialDanny.Properties.Resources.icons8_plus_math_48;
+            this.Addbutton.Location = new System.Drawing.Point(183, 15);
+            this.Addbutton.Name = "Addbutton";
+            this.Addbutton.Size = new System.Drawing.Size(75, 35);
+            this.Addbutton.TabIndex = 2;
+            this.Addbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.Addbutton.UseVisualStyleBackColor = true;
+            this.Addbutton.Click += new System.EventHandler(this.Addbutton_Click);
+            // 
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::SegundoParcialDanny.Properties.Resources.search;
@@ -243,44 +285,15 @@
             this.NuevoButton.UseVisualStyleBackColor = true;
             this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
-            // groupBox1
+            // button1
             // 
-            this.groupBox1.Controls.Add(this.Addbutton);
-            this.groupBox1.Controls.Add(this.MetacomboBox);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(11, 331);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(476, 189);
-            this.groupBox1.TabIndex = 32;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Metas";
-            // 
-            // Addbutton
-            // 
-            this.Addbutton.Location = new System.Drawing.Point(183, 15);
-            this.Addbutton.Name = "Addbutton";
-            this.Addbutton.Size = new System.Drawing.Size(75, 35);
-            this.Addbutton.TabIndex = 2;
-            this.Addbutton.Text = "ADD";
-            this.Addbutton.UseVisualStyleBackColor = true;
-            this.Addbutton.Click += new System.EventHandler(this.Addbutton_Click);
-            // 
-            // MetacomboBox
-            // 
-            this.MetacomboBox.FormattingEnabled = true;
-            this.MetacomboBox.Location = new System.Drawing.Point(46, 20);
-            this.MetacomboBox.Name = "MetacomboBox";
-            this.MetacomboBox.Size = new System.Drawing.Size(121, 24);
-            this.MetacomboBox.TabIndex = 1;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 56);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(464, 115);
-            this.dataGridView1.TabIndex = 0;
+            this.button1.Location = new System.Drawing.Point(331, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 35);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+          
             // 
             // RVendedor
             // 
@@ -340,5 +353,6 @@
         private System.Windows.Forms.Button Addbutton;
         private System.Windows.Forms.ComboBox MetacomboBox;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
     }
 }

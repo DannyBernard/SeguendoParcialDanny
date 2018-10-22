@@ -203,6 +203,8 @@ namespace SegundoParcialDanny.UI.Registro
             RMeta rMeta = new RMeta();
             rMeta.Show();
         }
+
+      
     }
 
 }
