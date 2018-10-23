@@ -15,10 +15,13 @@ namespace SegundoParcialDanny.UI.Registro
 {
     public partial class RVendedor : Form
     {
+        public List<Meta> Detalle { get; set; }
         RepositoryBase<Vendedor> repositorio;
         public RVendedor()
         {
             InitializeComponent();
+            LlenarComboBox();
+            this.Detalle = new List<Meta>();
         }
         public void Limpiar()
         {
@@ -41,6 +44,7 @@ namespace SegundoParcialDanny.UI.Registro
                 Total = Convert.ToSingle(TotaltextBox.Text),
                 Fecha = FechadateTimePicker.Value
             };
+            this.Detalle = vendedor.Metas;
             return vendedor;
         }
 
@@ -52,6 +56,7 @@ namespace SegundoParcialDanny.UI.Registro
             RetencionnumericUpDown.Value = Convert.ToDecimal( vendedores.Retecion);
             TotaltextBox.Text = Convert.ToString(vendedores.Total);
             FechadateTimePicker.Value = vendedores.Fecha;
+            vendedores.Metas = this.Detalle;
         }
 
 
@@ -86,7 +91,7 @@ namespace SegundoParcialDanny.UI.Registro
         public void LlenarComboBox()
         {
             RepositoryBase<Meta> repositrio = new RepositoryBase<Meta>();
-            MetacomboBox.DataSource = repositorio.GetList(x => true);
+          // MetacomboBox.DataSource = repositorio.GetList(x => true);
            MetacomboBox.ValueMember = "Descripcion";
         }
 
@@ -102,6 +107,7 @@ namespace SegundoParcialDanny.UI.Registro
             repositorio = new RepositoryBase<Vendedor>();
             bool paso = false;
             Vendedor vendedores;
+            Meta meta = new Meta();
             Contexto contexto = new Contexto();
 
             if (!Validar())
@@ -118,6 +124,7 @@ namespace SegundoParcialDanny.UI.Registro
                         MessageBox.Show("No se puede modificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     paso = repositorio.Modificar(vendedores);
+                    paso = MetaBll.Modificar(meta);
                 }
                 if (paso)
                 {
@@ -203,11 +210,33 @@ namespace SegundoParcialDanny.UI.Registro
             RMeta rMeta = new RMeta();
             rMeta.Show();
         }
+        private void CargarGrid()
+        {
+            MetadataGridView.DataSource = null;
+           MetadataGridView.DataSource = this.Detalle;
+        }
+        private void Agregarbutton_Click(object sender, EventArgs e)
+        {
 
-      
+           
+            if (MetadataGridView.DataSource != null)
+                Detalle = (List<Meta>)MetadataGridView.DataSource;
+                 this.Detalle.Add(
+                new Meta
+                (
+                  MetaId: 0,
+                  Descripcion: NombretextBox.Text,
+                  Cuotas: (float)RetencionnumericUpDown.Value
+                 )
+                    );
+            CargarGrid();
+            
+           
+        }
+    }
     }
 
-}
+
 
 
 

@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\IRpository.cs" />
+    <Compile Include="BLL\MetaBll.cs" />
     <Compile Include="BLL\RepositoryBase.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Meta.cs" />
