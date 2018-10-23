@@ -52,35 +52,35 @@ namespace SegundoParcialDanny.UI.Registro
         {
             IDnumericUpDown.Value = vendedores.IDVendedor;
             NombretextBox.Text = vendedores.Nombre;
-            SueldonumericUpDown.Value =Convert.ToDecimal( vendedores.Sueldo);
-            RetencionnumericUpDown.Value = Convert.ToDecimal( vendedores.Retecion);
+            SueldonumericUpDown.Value = Convert.ToDecimal(vendedores.Sueldo);
+            RetencionnumericUpDown.Value = Convert.ToDecimal(vendedores.Retecion);
             TotaltextBox.Text = Convert.ToString(vendedores.Total);
             FechadateTimePicker.Value = vendedores.Fecha;
             vendedores.Metas = this.Detalle;
         }
 
 
-    
-    private bool Validar()
-    {
-        bool paso = true;
-        if (RetencionnumericUpDown.Value == 0)
+
+        private bool Validar()
         {
-            errorProvider1.SetError(RetencionnumericUpDown, "Campo no puede estar en 0");
-            paso = false;
+            bool paso = true;
+            if (RetencionnumericUpDown.Value == 0)
+            {
+                errorProvider1.SetError(RetencionnumericUpDown, "Campo no puede estar en 0");
+                paso = false;
+            }
+            if (SueldonumericUpDown.Value == 0)
+            {
+                errorProvider1.SetError(SueldonumericUpDown, "Campo no puede estar en 0");
+                paso = false;
+            }
+            if (string.IsNullOrWhiteSpace(NombretextBox.Text))
+            {
+                errorProvider1.SetError(NombretextBox, "Campo Vacio");
+                paso = false;
+            }
+            return paso;
         }
-        if (SueldonumericUpDown.Value == 0)
-        {
-            errorProvider1.SetError(SueldonumericUpDown, "Campo no puede estar en 0");
-            paso = false;
-        }
-        if (string.IsNullOrWhiteSpace(NombretextBox.Text))
-        {
-            errorProvider1.SetError(NombretextBox, "Campo Vacio");
-            paso = false;
-        }
-        return paso;
-    }
         private bool EstaEnLaBaseDeDatos()
         {
             RepositoryBase<Vendedor> repositoryBase = new RepositoryBase<Vendedor>();
@@ -91,8 +91,8 @@ namespace SegundoParcialDanny.UI.Registro
         public void LlenarComboBox()
         {
             RepositoryBase<Meta> repositrio = new RepositoryBase<Meta>();
-          // MetacomboBox.DataSource = repositorio.GetList(x => true);
-           MetacomboBox.ValueMember = "Descripcion";
+            // MetacomboBox.DataSource = repositorio.GetList(x => true);
+            MetacomboBox.ValueMember = "Descripcion";
         }
 
 
@@ -180,9 +180,9 @@ namespace SegundoParcialDanny.UI.Registro
             }
 
         }
-        
 
-       
+
+
 
         private void SueldonumericUpDown_ValueChanged_1(object sender, EventArgs e)
         {
@@ -213,28 +213,29 @@ namespace SegundoParcialDanny.UI.Registro
         private void CargarGrid()
         {
             MetadataGridView.DataSource = null;
-           MetadataGridView.DataSource = this.Detalle;
+            MetadataGridView.DataSource = this.Detalle;
         }
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
 
-           
+
             if (MetadataGridView.DataSource != null)
                 Detalle = (List<Meta>)MetadataGridView.DataSource;
-                 this.Detalle.Add(
-                new Meta
-                (
-                  MetaId: 0,
-                  Descripcion: NombretextBox.Text,
-                  Cuotas: (float)RetencionnumericUpDown.Value
-                 )
-                    );
+            this.Detalle.Add(
+           new Meta
+           (
+             MetaId: 0,
+             Descripcion: NombretextBox.Text,
+             Cuotas: (float)RetencionnumericUpDown.Value
+            )
+               );
             CargarGrid();
-            
-           
+
+
         }
+        
     }
-    }
+}
 
 
 

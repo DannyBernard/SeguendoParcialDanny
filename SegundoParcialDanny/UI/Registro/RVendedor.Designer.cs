@@ -187,9 +187,9 @@
             this.groupBox1.Controls.Add(this.MetacomboBox);
             this.groupBox1.Controls.Add(this.MetadataGridView);
             this.groupBox1.Location = new System.Drawing.Point(8, 269);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(357, 154);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
@@ -198,7 +198,7 @@
             // Agregarbutton
             // 
             this.Agregarbutton.Location = new System.Drawing.Point(248, 12);
-            this.Agregarbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Agregarbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(56, 28);
             this.Agregarbutton.TabIndex = 3;
@@ -210,7 +210,7 @@
             // 
             this.Addbutton.Image = global::SegundoParcialDanny.Properties.Resources.icons8_plus_math_48;
             this.Addbutton.Location = new System.Drawing.Point(137, 12);
-            this.Addbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Addbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Addbutton.Name = "Addbutton";
             this.Addbutton.Size = new System.Drawing.Size(56, 28);
             this.Addbutton.TabIndex = 2;
@@ -222,16 +222,17 @@
             // 
             this.MetacomboBox.FormattingEnabled = true;
             this.MetacomboBox.Location = new System.Drawing.Point(34, 16);
-            this.MetacomboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MetacomboBox.Margin = new System.Windows.Forms.Padding(2);
             this.MetacomboBox.Name = "MetacomboBox";
             this.MetacomboBox.Size = new System.Drawing.Size(92, 21);
             this.MetacomboBox.TabIndex = 1;
+
             // 
             // MetadataGridView
             // 
             this.MetadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MetadataGridView.Location = new System.Drawing.Point(4, 46);
-            this.MetadataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MetadataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.MetadataGridView.Name = "MetadataGridView";
             this.MetadataGridView.RowTemplate.Height = 24;
             this.MetadataGridView.Size = new System.Drawing.Size(348, 93);
@@ -307,7 +308,7 @@
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RVendedor";
             this.Text = "RVendedor";
             ((System.ComponentModel.ISupportInitialize)(this.RetencionnumericUpDown)).EndInit();

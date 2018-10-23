@@ -17,6 +17,7 @@ namespace SegundoParcialDanny.Entidades
         public float Total { get; set; }
         public DateTime Fecha { get; set; }
         public float Retencion { get; internal set; }
+        public float meta { get; set; }
         public virtual List<Meta> Metas { get; set; }
 
         public Vendedor()
@@ -27,6 +28,7 @@ namespace SegundoParcialDanny.Entidades
             Retecion = 0;
             Total = 0;
             Fecha = DateTime.Now;
+            meta = 0;
             Metas = new List<Meta>();
         }
 
